@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page</title>
+    <title>Twitch Embed</title>
 </head>
 <body>
-    <h1>Hello, Miro!</h1>
+    <iframe id="twitchPlayer" src="https://player.twitch.tv/?channel=beanixi&parent=beauixi.github.io/index.html&autoplay=true&muted=true" frameborder="0" allow="autoplay; fullscreen" height="378" width="620"></iframe>
+
+    <script>
+        document.addEventListener('visibilitychange', function() {
+            var player = document.getElementById('twitchPlayer');
+            if (document.visibilityState === 'visible') {
+                player.src += '';
+            }
+        });
+    </script>
 </body>
 </html>
